@@ -1,0 +1,30 @@
+[package]
+name = "libvill"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+bevy = "0.7.0"
+
+image = "0.24.1"
+
+sdl2 = {version = "0.34.5", features = ["gfx"]}
+
+# UI
+
+glow = "^0.10"
+imgui = { version = "0.8.1-alpha.0", path = "../imgui-rs/imgui" }
+imgui-sdl2-support = { version = "0.8.1-alpha.0", path = "../imgui-rs/imgui-sdl2-support" }
+imgui-glow-renderer = { version = "0.8.1-alpha.0", path = "../imgui-rs/imgui-glow-renderer" }
+
+# Data
+
+serde = {version = "1.0.136", features = ["derive"]}
+
+deser-hjson = "1.0.2"
+toml = "0.5.9"
+
+[[bin]]
+name = "vill"
+path = "src/bin/main.rs"
